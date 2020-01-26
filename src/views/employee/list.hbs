@@ -1,0 +1,132 @@
+{{!-- <style>
+     @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap')
+
+    *{
+     font-family: 'Montserrat', sans-serif;
+
+    }
+   .icon{
+        color:burlywood;
+    }
+</style> --}}
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Zhi+Mang+Xing&display=swap');
+    
+
+    *{
+    font-size: 105%;
+    }
+
+    .split {
+        height: 100%;
+        width: 50%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+    
+    /* Control the left side */
+    .one{
+        left: 0;
+         background-color: blueviolet;
+
+    }
+    
+    /* Control the right side */
+    .two{
+        right: 0; 
+        background-color: white;
+    }
+    
+    .card {
+        min-height: 200px;
+    }
+
+    .pop{
+        z-index: 5;
+        position: relative;
+        top: 25px;
+        -webkit-box-shadow: 5px 5px 17px -2px #C3C3C3; 
+        box-shadow: 5px 5px 17px -2px #C3C3C3;
+        padding: 25px 5px 0px 20px;
+        
+        
+    }
+    
+    .rate{
+        font-size:80% ;
+        font-style: italic;
+    }
+
+    .name{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        font-size: 110%;
+    }
+    .place{
+        font-style: italic;
+        font-size: 105%;
+    }
+    
+    .review::first-letter{
+        color: blueviolet;  
+        font-size: xx-large;
+        font-family: 'Zhi Mang Xing', cursive;
+        
+    }
+
+    .title{
+        font-family: 'Montserrat', sans-serif;
+        z-index:5;
+        color: white;
+        font-size: 170%;
+        position: relative;
+        top: 50px;
+    }
+</style>
+
+
+    <div class="split one">
+            
+    </div>
+    <div class="split two">
+          
+    </div>
+    
+    <div class="container">
+        <h2 class="title">Reviews</h2>
+            <div class="row">
+                {{#each list}}
+                <div class="col-sm-4 mt-5">
+                  <div class=" pop card h-100">
+                    <div idclass="card-body">
+                      <h5 class="card-title name">{{this.name}}</h5>
+                      <div class="row">
+                        <h6 class="card-title col-md-8 place">{{this.email}}</h6>
+                        <div class="rate col-md-4 rate">{{this.city}}/5</div>
+                      </div>
+                      <p class="card-text review">"{{this.mobile}}</p>
+
+                    </div>
+                  </div>
+                </div>
+                {{/each}}
+            
+              </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    

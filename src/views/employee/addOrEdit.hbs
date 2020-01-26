@@ -1,0 +1,71 @@
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+    
+
+    *{
+        font-family:'Montserrat', sans-serif!important;
+    }
+    body{
+        background:hsl(271, 76%, 53%);
+    }
+    .boxxx{
+        -webkit-box-shadow: 6px 5px 19px 0px rgba(201,199,201,1);
+        -moz-box-shadow: 6px 5px 19px 0px rgba(201,199,201,1);
+        box-shadow: 6px 5px 19px 0px rgba(201,199,201,1);
+        background-color: #fff;
+        margin-top: 45px;
+        padding:30px;
+        border-radius:30px;
+        }
+        .inputs{
+            width: 50%;
+        }
+        
+</style>
+<body style="background:rgb(182,125,244);">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 boxxx" style="">
+           <h3>{{viewTitle}}</h3><br>
+
+            <form action="/employee" method="POST" autocomplete="off">
+                <input type="hidden" name="_id" value="{{employee._id}}">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" class="form-control" name="name" placeholder="Full Name" value="{{employee.name}}">
+                    <div class="text-danger">
+                        {{employee.fullNameError}}</div>
+                    </div>
+                <div class="form-group">
+                    <label>Place</label>
+                    <input type="text" class="form-control" name="email" placeholder="Place" value="{{employee.email}}">
+                    {{!-- <div class="text-danger">
+                        {{employee.emailError}}</div>
+                </div> --}}</div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label>Your Experience</label>
+                        {{!-- <input type="textfield" class="form-control" name="mobile" placeholder="Experience" value="{{employee.mobile}}"> --}}
+                        <textarea name="mobile" id="" cols="40" rows="10" ></textarea>
+                    </div>
+                    <div class="form-group col-md-6 pl-4">
+                        <label>Rate from 0 to 5</label><br>
+                        <input type="number" class="form-control inputs" name="city" placeholder="Rating" max="5" min="0" value="{{employee.city}}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-dark"><i class="fa fa-database"></i> Submit</button>
+                    <a class="btn btn-light" href="/employee/list"><i class="fa fa-list-alt"></i> View All</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+
+
+
+
+
+
+
